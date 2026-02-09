@@ -78,7 +78,8 @@
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply font-semibold tracking-tight;
+    font-weight: 600;
+    letter-spacing: -0.025em;
   }
 }
 
@@ -106,7 +107,12 @@
 
   /* Skill pill */
   .skill-pill {
-    @apply px-4 py-2 rounded-full text-sm font-medium transition-all duration-300;
+    padding: 0.5rem 1rem;
+    border-radius: 9999px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    transition-property: all;
+    transition-duration: 300ms;
     background: hsl(var(--secondary));
     border: 1px solid hsl(var(--border));
   }
@@ -120,7 +126,10 @@
 
   /* Project card */
   .project-card {
-    @apply rounded-2xl overflow-hidden transition-all duration-500;
+    border-radius: 1rem;
+    overflow: hidden;
+    transition-property: all;
+    transition-duration: 500ms;
     background: var(--gradient-card);
     border: 1px solid hsl(var(--border));
   }
@@ -139,7 +148,11 @@
 
   /* Button variants */
   .btn-primary {
-    @apply px-8 py-3 rounded-full font-medium transition-all duration-300;
+    padding: 0.75rem 2rem;
+    border-radius: 9999px;
+    font-weight: 500;
+    transition-property: all;
+    transition-duration: 300ms;
     background: var(--gradient-blue);
     box-shadow: 0 4px 20px hsl(var(--primary) / 0.4);
   }
@@ -150,7 +163,11 @@
   }
 
   .btn-secondary {
-    @apply px-8 py-3 rounded-full font-medium transition-all duration-300;
+    padding: 0.75rem 2rem;
+    border-radius: 9999px;
+    font-weight: 500;
+    transition-property: all;
+    transition-duration: 300ms;
     background: transparent;
     border: 1px solid hsl(var(--muted-foreground) / 0.3);
   }
@@ -162,7 +179,10 @@
 
   /* Social link */
   .social-link {
-    @apply p-3 rounded-full transition-all duration-300;
+    padding: 0.75rem;
+    border-radius: 9999px;
+    transition-property: all;
+    transition-duration: 300ms;
     background: hsl(var(--secondary));
     border: 1px solid hsl(var(--border));
   }
@@ -176,7 +196,8 @@
 
   /* Number indicator */
   .number-indicator {
-    @apply text-sm font-medium;
+    font-size: 0.875rem;
+    font-weight: 500;
     color: hsl(var(--muted-foreground));
   }
 
@@ -186,17 +207,23 @@
 
   /* Animated underline */
   .animated-underline {
-    @apply relative;
+    position: relative;
   }
 
   .animated-underline::after {
     content: '';
-    @apply absolute bottom-0 left-0 w-0 h-0.5 transition-all duration-300;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 0.125rem;
+    transition-property: all;
+    transition-duration: 300ms;
     background: var(--gradient-blue);
   }
 
   .animated-underline:hover::after {
-    @apply w-full;
+    width: 100%;
   }
 }
 
