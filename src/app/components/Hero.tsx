@@ -1,5 +1,5 @@
 import { Github, Linkedin, Mail, ChevronDown } from 'lucide-react';
-import profilePhoto from '@/assets/profile-photo.jpg';
+import profilePhoto from '@/assets/1745574.jpg';
 
 const Hero = () => {
   const scrollToProjects = () => {
